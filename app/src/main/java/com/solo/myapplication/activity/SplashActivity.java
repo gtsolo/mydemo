@@ -1,4 +1,4 @@
-package com.solo.myapplication;
+package com.solo.myapplication.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
