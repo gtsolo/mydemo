@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.solo.myapplication.MainActivity;
+import com.solo.myapplication.R;
+
 import java.util.Timer;
 import java.util.TimerTask;
 

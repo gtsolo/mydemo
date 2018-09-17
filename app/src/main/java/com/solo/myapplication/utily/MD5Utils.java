@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
  * Created by solo on 2018/9/8.
  */
 
-public class MD5Utily {
+public class MD5Utils {
     public  static  String md5(String text)
     {
         MessageDigest digest=null;
