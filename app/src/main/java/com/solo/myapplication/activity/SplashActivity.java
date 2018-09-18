@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
       tv_version= (TextView) findViewById(R.id.tv_version);
         try {
             PackageInfo packinfo =getPackageManager().getPackageInfo(getPackageName(),0);
-            tv_version.setText(packinfo.versionName);
+            tv_version.setText("V"+packinfo.versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             tv_version.setText("V");
