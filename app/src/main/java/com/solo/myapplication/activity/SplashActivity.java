@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.solo.myapplication.MainActivity;
 import com.solo.myapplication.R;
 
 import java.util.Timer;
@@ -38,7 +37,7 @@ public class SplashActivity extends AppCompatActivity {
     TimerTask timertask =new TimerTask() {
         @Override
         public void run() {
-            Intent intent=new Intent(SplashActivity.this,MainActivity.class);
+            Intent intent=new Intent(SplashActivity.this,LoginActivity.MainActivity.class);
             startActivity(intent);
             SplashActivity.this.finish();
         }
