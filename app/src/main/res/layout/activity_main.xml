@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.solo.myapplication.activity.LoginActivity$MainActivity">
+    tools:context="com.solo.myapplication.activity.LoginActivity">
     <!-- TODO 底部导航栏制作 -->
     <include layout="@layout/main_title_bar" />
     <FrameLayout
@@ -66,15 +66,14 @@
                 android:text="习题"
                 android:textColor="#666666"
                 android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/bottom_bar_image_exercises"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_above="@id/bottom_bar_text_exercises"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="3dp"
-                android:src="@drawable/main_exercises_icon" />
+                android:src="@drawable/main_exercises_icon"
+                android:layout_above="@+id/bottom_bar_text_exercises"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/bottom_bar_myinfo_btn"
