@@ -85,7 +85,7 @@ public class Activity_register extends AppCompatActivity {
                           Toast.makeText(Activity_register.this,"注册成功",Toast.LENGTH_LONG).show();
                           saveRegisterName(userName,psw);
                           Intent intent=new Intent();
-                          intent.putExtra("username",userName);
+                          intent.putExtra("userName",userName);
                           setResult(RESULT_OK,intent);
                           Activity_register.this.finish();
                       }
@@ -98,7 +98,7 @@ public class Activity_register extends AppCompatActivity {
 
     private void saveRegisterName(String userName, String psw) {
         String md5psw= MD5Utils.md5(psw);
-        SharedPreferences sp=getSharedPreferences("userinfo",MODE_PRIVATE);
+        SharedPreferences sp=getSharedPreferences("loginInfo",MODE_PRIVATE);
         SharedPreferences.Editor editor=sp.edit();
         editor.putString(userName,md5psw);
         editor.commit();
@@ -106,8 +106,8 @@ public class Activity_register extends AppCompatActivity {
 
     private boolean isExistUsername(String userName) {
             boolean has_usename=false;
-        SharedPreferences sp =getSharedPreferences("userinfo",MODE_PRIVATE);
-    String sppsw=sp.getString(userName,"");
+        SharedPreferences sp =getSharedPreferences("loginInfo",MODE_PRIVATE);
+    String psw=sp.getString(userName,"");
         if(!TextUtils.isEmpty(psw))
         {
             has_usename=true;

@@ -78,6 +78,8 @@ startActivityForResult(intent,1);
                     data.putExtra("isLogin",true);
                     setResult(RESULT_OK,data);
                     LoginActivity.this.finish();
+                    data.setClass(LoginActivity.this,MainActivity.class);
+                    startActivityForResult(data,RESULT_OK);
                     return;
                 }else if((spPsw!=null&&!TextUtils.isEmpty(spPsw)&&!md5Psw.equals(spPsw))){
                     Toast.makeText(LoginActivity.this, "输入的用户名和密码不一致", Toast.LENGTH_SHORT).show();
