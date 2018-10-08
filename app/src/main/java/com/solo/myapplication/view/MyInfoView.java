@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.solo.myapplication.R;
 import com.solo.myapplication.activity.LoginActivity;
+import com.solo.myapplication.activity.SettingActivity;
 import com.solo.myapplication.utils.AnalysisiUtils;
 
 public class MyInfoView {
@@ -79,7 +80,8 @@ public class MyInfoView {
             public void onClick(View v) {
                 if(readLoginStatus()){
                     //跳转到设置界面
-
+                    Intent intent=new Intent(mContext,SettingActivity.class);
+                    mContext.startActivityForResult(intent,1);
                 }else{
                     Toast.makeText(mContext, "您还未登录，请先登录", Toast.LENGTH_SHORT).show();
                 }
