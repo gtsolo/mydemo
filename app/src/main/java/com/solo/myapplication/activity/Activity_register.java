@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.solo.myapplication.R;
-import com.solo.myapplication.utily.MD5Utils;
+import com.solo.myapplication.utils.MD5Utils;
 
 public class Activity_register extends AppCompatActivity {
 
