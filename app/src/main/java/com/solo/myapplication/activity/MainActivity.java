@@ -1,6 +1,7 @@
 package com.solo.myapplication.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.solo.myapplication.R;
+import com.solo.myapplication.view.MyInfoView;
 
 public  class MainActivity extends AppCompatActivity implements View.OnClickListener{
    // TODO (1) 界面初始化init(),initBottomBar(),  initBodyLayout();
@@ -35,6 +37,7 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
     private TextView tv_back;
     private TextView tv_main_title;
     private RelativeLayout rl_title_bar;
+    private MyInfoView mMyInfoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +65,15 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
             case 1://习题的界面
                 break;
             case 2://我的界面
+                if(mMyInfoView==null){
+                    mMyInfoView =new MyInfoView(this);
+                    mBodyLayout.addView(mMyInfoView.getView());
+                }
+                else
+                {
+                    mMyInfoView.getView();
+                }
+                mMyInfoView.showView();
                 break;
         }
     }
@@ -193,6 +205,22 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null){
+            //从设置界面或登录界面传递过来的登录状态
+            boolean isLogin=data.getBooleanExtra("isLogin",false);
+            if(isLogin){//登录成功时显示课程界面
+                clearBottomImageState();
+                selectDisplayView(0);
+            }
+            if (mMyInfoView != null) {//登录成功或退出登录时根据isLogin设置我的界面
+                mMyInfoView.setLoginParams(isLogin);
+            }
+        }
     }
 
     private void clearLoginStatus() {
