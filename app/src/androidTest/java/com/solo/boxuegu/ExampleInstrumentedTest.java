@@ -1,4 +1,4 @@
-package com.solo.myapplication;
+package com.solo.boxuegu;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

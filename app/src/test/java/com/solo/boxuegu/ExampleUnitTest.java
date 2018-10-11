@@ -1,4 +1,4 @@
-package com.solo.myapplication;
+package com.solo.boxuegu;
 
 import org.junit.Test;
 

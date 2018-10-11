@@ -1,4 +1,4 @@
-package com.solo.myapplication.activity;
+package com.solo.boxuegu.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,8 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.solo.myapplication.R;
-import com.solo.myapplication.view.MyInfoView;
+import com.solo.boxuegu.R;
+import com.solo.boxuegu.view.MyInfoView;
 
 public  class MainActivity extends AppCompatActivity implements View.OnClickListener{
    // TODO (1) 界面初始化init(),initBottomBar(),  initBodyLayout();

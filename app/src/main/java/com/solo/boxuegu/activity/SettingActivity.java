@@ -1,4 +1,4 @@
-package com.solo.myapplication.activity;
+package com.solo.boxuegu.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.solo.myapplication.R;
+import com.solo.boxuegu.R;
 
 public class SettingActivity extends AppCompatActivity {
 
@@ -62,6 +62,9 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳转到设置密保界面
+                Intent intent=new Intent(SettingActivity.this,FindPswActivity.class);
+                intent.putExtra("from","security");
+                startActivity(intent);
             }
         });
         //退出登录的点击事件

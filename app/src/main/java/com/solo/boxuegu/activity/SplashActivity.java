@@ -1,4 +1,4 @@
-package com.solo.myapplication.activity;
+package com.solo.boxuegu.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.solo.myapplication.R;
+import com.solo.boxuegu.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

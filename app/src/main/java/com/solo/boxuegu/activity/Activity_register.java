@@ -1,4 +1,4 @@
-package com.solo.myapplication.activity;
+package com.solo.boxuegu.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,8 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.solo.myapplication.R;
-import com.solo.myapplication.utils.MD5Utils;
+import com.solo.boxuegu.R;
+import com.solo.boxuegu.utils.MD5Utils;
 
 public class Activity_register extends AppCompatActivity {
 

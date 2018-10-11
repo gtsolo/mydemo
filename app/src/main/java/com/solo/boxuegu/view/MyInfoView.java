@@ -1,4 +1,4 @@
-package com.solo.myapplication.view;
+package com.solo.boxuegu.view;
 
 /**
  * Created by solo on 2018/10/8.
@@ -16,10 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.solo.myapplication.R;
-import com.solo.myapplication.activity.LoginActivity;
-import com.solo.myapplication.activity.SettingActivity;
-import com.solo.myapplication.utils.AnalysisiUtils;
+import com.solo.boxuegu.R;
+import com.solo.boxuegu.activity.LoginActivity;
+import com.solo.boxuegu.activity.SettingActivity;
+import com.solo.boxuegu.utils.AnalysisiUtils;
 
 public class MyInfoView {
     public ImageView iv_head_icon;

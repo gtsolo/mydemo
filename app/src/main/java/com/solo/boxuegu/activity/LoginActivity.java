@@ -1,4 +1,4 @@
-package com.solo.myapplication.activity;
+package com.solo.boxuegu.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.solo.myapplication.R;
-import com.solo.myapplication.utils.MD5Utils;
+import com.solo.boxuegu.R;
+import com.solo.boxuegu.utils.MD5Utils;
 
 public class LoginActivity extends AppCompatActivity {
     private TextView tv_main_title;
@@ -55,6 +55,8 @@ startActivityForResult(intent,1);
             @Override
             public void onClick(View v) {
                 //跳转到密码找回界面
+                Intent intent=new Intent(LoginActivity.this,FindPswActivity.class);
+                startActivity(intent);
             }
         });
         btn_login.setOnClickListener(new View.OnClickListener() {

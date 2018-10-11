@@ -1,4 +1,4 @@
-package com.solo.myapplication.utils;
+package com.solo.boxuegu.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

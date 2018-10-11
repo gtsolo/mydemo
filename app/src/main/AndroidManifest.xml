@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.solo.myapplication">
+    package="com.solo.boxuegu">
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,8 @@
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SettingActivity" />
-        <activity android:name=".activity.ModifyPswActivity"></activity>
+        <activity android:name=".activity.ModifyPswActivity" />
+        <activity android:name=".activity.FindPswActivity"></activity>
     </application>
 
 </manifest>
