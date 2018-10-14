@@ -71,7 +71,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/register_selector"
+        android:background="@drawable/register"
         android:text="验证"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
