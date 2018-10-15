@@ -64,7 +64,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:id="@+id/ed_psw_conf"
-        android:drawableLeft="@drawable/user_name_icon"
+        android:drawableLeft="@drawable/psw_icon"
         android:drawablePadding="25dp"
         android:gravity="center_vertical"
         android:hint="请确认输入密码"
