@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.solo.boxuegu.R;
+import com.solo.boxuegu.view.ExercisesView;
 import com.solo.boxuegu.view.MyInfoView;
 
 public  class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -38,6 +39,7 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
     private TextView tv_main_title;
     private RelativeLayout rl_title_bar;
     private MyInfoView mMyInfoView;
+    private ExercisesView mExercisesView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,15 @@ public  class MainActivity extends AppCompatActivity implements View.OnClickList
             case 0://课程的界面
                 break;
             case 1://习题的界面
+                if(mExercisesView==null){
+                    mExercisesView =new ExercisesView(this);
+                    mBodyLayout.addView(mExercisesView.getView());
+                }
+                else
+                {
+                    mExercisesView.getView();
+                }
+                mExercisesView.showView();
                 break;
             case 2://我的界面
                 if(mMyInfoView==null){
