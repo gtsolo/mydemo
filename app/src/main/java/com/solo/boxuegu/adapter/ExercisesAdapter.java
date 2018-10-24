@@ -1,6 +1,7 @@
 package com.solo.boxuegu.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.solo.boxuegu.R;
+import com.solo.boxuegu.activity.ExercisesDetialActivity;
 import com.solo.boxuegu.bean.ExercisesBean;
 
 import java.util.List;
@@ -81,7 +83,13 @@ public class ExercisesAdapter extends BaseAdapter {
 				if (bean == null)
 					return;
 				//跳转到习题详情页面
-
+				Intent intent = new Intent(mContext,
+						ExercisesDetialActivity.class);
+				//把章节Id传递到习题详情页面
+				intent.putExtra("id", bean.id);
+				//把标题传递到习题详情页面
+				intent.putExtra("title", bean.title);
+				mContext.startActivity(intent);
 			}
 		});
 		return convertView;
