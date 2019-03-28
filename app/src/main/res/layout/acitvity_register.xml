@@ -80,7 +80,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:textSize="18sp"
-
         android:text="注 册"
         android:textColor="@android:color/white"
         android:background="@drawable/register"
